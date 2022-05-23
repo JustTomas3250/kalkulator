@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styly.css">
+    <script src="script.js"></script>
+    <title>Tři dveře</title>
+</head>
+<body>
+    <p id="vypis">Vyberte dveře</p>
+    <div class="dvere" id="d1" onclick="d1()">
+        <p id="sel1"></p>
+        <div class="otevreno"></div>
+        <div class="klika" id="k1"></div>
+        <p id="v1">Výhra!</p>
+    </div>
+    <div class="dvere" id="d2" onclick="d2()">
+        <p id="sel2"></p>
+        <div class="otevreno"></div>
+        <div class="klika" id="k2"></div>
+        <p id="v2">Výhra!</p>
+    </div>
+    <div class="dvere" id="d3" onclick="d3()">
+        <p id="sel3"></p>
+        <div class="otevreno"></div>
+        <div class="klika" id="k3"></div>
+        <p id="v3">Výhra!</p>
+    </div>
+    <button id="znova" onclick="znova()">Znova</button>
+
+    <p id="pocher">Počet her: 0</p>
+    <p id="pocvyher">Počet výher: 0</p>
+    <p id="zmen">Změna dveří ano/ne: 0/0</p>
+
+    <button id="ano" class="anone" onclick="ano()">Ano</button>
+    <button id="ne" class="anone" onclick="ne()">Ne</button>
+</body>
+</html>

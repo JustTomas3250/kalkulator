@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="styly2.css">
+    <link rel="icon" href="images/icon.png">
+    <title>Kalkulátor</title>
+</head>
+<body onload="clock()">
+        <p id="clock">SUSDAY</p>
+        <div id="display"></div>
+        <button id="texture" onclick="stxt()">💣</button>
+        <button id="dark" onclick="ldmode()">🌞</button>
+        <button id="chcolor" onclick="chcolor()">🎨</button>
+        
+        <img src="images/segment.png" onclick="seg1()" alt="1. segment" id = "seg1" class="segh seg" draggable="false">
+        <img src="images/segment_ver.png" onclick="seg2()" alt="2. segment" id = "seg2" class="segv seg" draggable="false">
+        <img src="images/segment_ver.png" onclick="seg3()" alt="3. segment" id = "seg3" class="segv seg" draggable="false">
+        <img src="images/segment.png" onclick="seg4()" alt="4. segment" id = "seg4" class="segh seg" draggable="false">
+        <img src="images/segment_ver.png" onclick="seg5()" alt="5. segment" id = "seg5" class="segv seg" draggable="false">
+        <img src="images/segment_ver.png" onclick="seg6()" alt="6. segment" id = "seg6" class="segv seg" draggable="false">
+        <img src="images/segment.png" onclick="seg7()" alt="7. segment" id = "seg7" class="segh seg" draggable="false">
+
+        <div class="cont">
+            <div onclick="enter()" class="button"><img src="images/enter2.png" alt="Enter" draggable="false"></div>
+            <div onclick="plus()" class="button">+</div>
+            <div onclick="minus()" class="button">-</div>
+            <div onclick="dot()" class="button">,</div>
+
+            <div onclick="cleare()" class="button">CE</div>
+            <div onclick="krat()" class="button">*</div>
+            <div onclick="deleno()" class="button">/</div>
+            <div onclick="kratminus()" class="button"><img src="images/plusminus.png" alt="plusminus" draggable="false"></div>
+
+            <div onclick="backspace()" class="button">C</div>
+            <div onclick="equal()" class="button">=</div>
+            <div onclick="sqrt()" class="button">^</div>
+            <div onclick="odmocnina()" class="button"><img src="images/odmocnina.png" alt="Odmocnina" draggable="false"></div>
+        </div>
+
+        <hr id="hr">
+        <p id="h">Historie</p>
+
+        <p id="h1" class="hi"></p>
+</body>
+</html>

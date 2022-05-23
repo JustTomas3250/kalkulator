@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="styly.css">
+    <link rel="icon" href="images/icon.png">
+    <title>Kalkulátor</title>
+</head>
+<body onload="clock()">
+        <p id="clock"></p>
+        <div id="display"></div>
+        <button id="texture" onclick="ntxt()">🧨</button>
+        <button id="dark" onclick="ldmode()">🌞</button>
+        
+        <img src="images/segment.png" onclick="seg1()" alt="1. segment" id = "seg1" class="segh button" draggable="false">
+        <img src="images/segment_ver.png" onclick="seg2()" alt="2. segment" id = "seg2" class="segv button" draggable="false">
+        <img src="images/segment_ver.png" onclick="seg3()" alt="3. segment" id = "seg3" class="segv button" draggable="false">
+        <img src="images/segment.png" onclick="seg4()" alt="4. segment" id = "seg4" class="segh button" draggable="false">
+        <img src="images/segment_ver.png" onclick="seg5()" alt="5. segment" id = "seg5" class="segv button" draggable="false">
+        <img src="images/segment_ver.png" onclick="seg6()" alt="6. segment" id = "seg6" class="segv button" draggable="false">
+        <img src="images/segment.png" onclick="seg7()" alt="7. segment" id = "seg7" class="segh button" draggable="false">
+
+        <img src="images/enter.png" onclick="enter()" alt="enter" id = "enter" class="button" draggable="false">
+        <img src="images/plus.png" onclick="plus()" alt="plus" id="plus" class="button" draggable="false">
+        <img src="images/rovnase.png" onclick="equal()" alt="rovná se" id="rovnase" class="button" draggable="false">
+        <img src="images/minus.png" onclick="minus()" alt="mínus" id="minus" class="button" draggable="false">
+        <img src="images/krat.png" onclick="krat()" alt="krát" id="krat" class="button" draggable="false">
+        <img src="images/deleno.png" onclick="deleno()" alt="děleno" id="deleno" class="button" draggable="false">
+        <img src="images/C.png" onclick="cleare()" alt="Clear" id="clear" class="button" draggable="false">
+        <img src="images/back.png" onclick="backspace()" alt="backspace" id="backspace" class="button" draggable="false">
+        <img src="images/nadruhou.png" onclick="sqrt()" alt="na druhou" id="sqrt" class="button" draggable="false">
+        <img src="images/dot.png" onclick="dot()" alt="čárka" id="dot" class="button" draggable="false">
+        <img src="images/kratminus.png" onclick="kratminus()" alt="Vynásobení -1" id="kratminus" class="button" draggable="false">
+        <img src="images/odmocnina.png" onclick="odmocnina()" alt="odmocnina" id="odmocnina" class="button" draggable="false">
+
+        <hr id="hr">
+        <p id="h">Historie</p>
+
+        <p id="h1" class="hi"></p>
+</body>
+</html>

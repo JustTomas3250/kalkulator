@@ -1,0 +1,125 @@
+@font-face {
+    font-family: segment;
+    src: url("fonts/Seven\ Segment.ttf");
+}
+@font-face {
+    font-family: segment2;
+    src: url(fonts/digital-7.mono.ttf);
+}
+body{
+    background-color: rgb(40, 40, 40);
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+#clock{
+    position: absolute;
+    /*10 10*/
+    margin: -1vw 0 0 1vw;
+    font-family: segment2;
+    /*30*/
+    font-size: 2.5vw;
+}
+
+#display{
+    background-color: white;
+    color: black;
+    /*510*/
+    width: 40vw;
+    /*65*/
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 1vw;
+    /*40*/
+    margin-top: 3vw;
+    font-family: segment2;
+    /*50*/
+    font-size: 3.9vw;
+    /*5*/
+    padding-left: 0.8vw;
+    padding-right: 0.8vw;
+    overflow: auto;
+}
+
+img, .button, button{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#chcolor{
+    margin: -6vw 0 0 27vw;
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    border: 2px solid rgb(228, 0, 141);
+    font-size: 3vw;
+    padding: 0;
+    padding-bottom: 0.3vw;
+    border-radius: 10vw;
+    cursor: pointer;
+    background-color: white;
+    transition-duration: 0.4s;
+}
+
+#chcolor:hover{
+    background-color: rgb(228, 0, 141);
+}
+
+.seg:hover{
+    filter: brightness(50%);
+}
+
+.seg{
+    position: absolute;
+}
+
+.segh{
+    /*170*/
+    width: 12.83vw
+}
+
+.segv{
+    /*170*/
+    height: 12.83vw;
+}
+
+#seg1{
+    /*50 -380*/
+    margin: 3.774vw 0 0 -32.679vw;
+}
+
+#seg2{
+    /*85 -415*/
+    margin: 6.415vw 0 0 -35.321vw;
+}
+
+#seg3{
+    /*85 -233*/
+    margin: 6.415vw 0 0 -21.585vw;
+}
+
+#seg4{
+    /*233 380*/
+    margin: 17.585vw 0 0 -32.679vw;
+}
+
+#seg5{
+    /*270 -415*/
+    margin: 20.377vw 0 0 -35.321vw;
+}
+
+#seg6{
+    /*270 -233*/
+    margin: 20.377vw 0 0 -21.585vw;
+}
+
+#seg7{
+    /*418 -380*/
+    margin: 31.547vw 0 0 -32.679vw;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        body{
+            background-color: rgb(50, 50, 50);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 20vw;
+        }
+        #start{
+            font-size: 3vw;
+        }
+        #enter{
+            font-size: 3vw;
+            display: none;
+        }
+        #input_{
+            font-size: 3vw;
+            visibility: hidden;
+        }
+        #priklad{
+            color: white;
+            font-size: 4vw;
+        }
+        #poc{
+            color: white;
+            font-size: 2vw;
+        }
+        button{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <p id="poc">score: 0 <br>high score: 0</p>
+        <button onclick="start()" id="start">Start</button>
+    <p id="priklad"></p>
+    <br>
+    <input type="text" id="input_" oninput="input_()" autofocus>
+    <br>
+    <br>
+    
+    <script>
+        var sc;
+        var scf;
+        var r1;
+        var r2;
+        var rzn;
+        var vysledek;
+        var poc = 0;
+        var konec = 0;
+        var maxpoc = localStorage.getItem("maxpoc");
+        if(maxpoc + 1 == 1)
+            maxpoc = 0;
+        document.getElementById("poc").innerText = "score: " + poc + "\nhigh score: " + maxpoc;
+        function start(){
+            document.getElementById("input_").style.visibility = "visible";
+            document.getElementById("input_").style.position = "relative";
+            document.getElementById("start").style.display = "none";
+            document.getElementById("start").style.position = "absolute";
+            random();
+            document.body.style.background = "rgb(50, 50, 50)";
+            document.getElementById('input_').focus();
+        }
+        function random(){
+            rzn = Math.floor(Math.random() * 5 + 1);
+            switch (rzn){
+                case 1: r1 = Math.floor(Math.random() * 99 + 1);
+                        r2 = Math.floor(Math.random() * 99 + 1);
+                        document.getElementById("priklad").innerText = r1 + "+" + r2 + "=";
+                        vysledek = r1 + r2;
+                        setTimeout(timer, 5000);
+                        break;
+                case 2: r1 = Math.floor(Math.random() * 9 + 2);
+                        r2 = Math.floor(Math.random() * 9 + 2);
+                        document.getElementById("priklad").innerText = r1 + "×" + r2 + "=";
+                        vysledek = r1 * r2;
+                        setTimeout(timer, 3500);
+                        break;
+                case 3: do{
+                        r1 = Math.floor(Math.random() * 199 + 1);
+                        r2 = Math.floor(Math.random() * 199 + 1);
+                        }while(r1 < r2);
+                        document.getElementById("priklad").innerText = r1 + "-" + r2 + "=";
+                        vysledek = r1 - r2;
+                        setTimeout(timer, 7500);
+                        break;
+                case 4: r1 = Math.floor(Math.random() * 9 + 2);
+                        r2 = Math.floor(Math.random() * 9 + 2);
+                        r1 *= r2;
+                        document.getElementById("priklad").innerText = r1 + "÷" + r2 + "=";
+                        vysledek = r1 / r2;
+                        setTimeout(timer, 3500);
+                        break;
+                case 5: r2 = Math.floor(Math.random() * 2 + 2);
+                        if(r2 == 2)
+                            r1 = Math.floor(Math.random() * 14 + 2);
+                        else r1 = Math.floor(Math.random() * 4 + 2);
+                        document.getElementById("priklad").innerText = r1 + "^" + r2 + "=";
+                        if(r2 == 2){
+                            r1 *= r1;
+                            setTimeout(timer, 4000);
+                        }
+                        else {
+                            r1 = r1 * r1 * r1;
+                            setTimeout(timer, 4000);
+                        } 
+                        vysledek = r1;
+                        
+                        break;
+            }
+        }
+        function timer(){
+            scf = sc;
+            document.getElementById("input_").style.visibility = "hidden";
+            document.getElementById("input_").style.position = "absolute";
+            if(scf == vysledek){
+                poc++;
+                document.body.style.background = "green";
+                konec = 1;
+            }
+            else{
+                poc = 0;
+                konec = 1;
+                document.body.style.background = "#B70600";
+            }
+            if(maxpoc < poc)
+                maxpoc = poc;
+            document.getElementById("poc").innerText = "score: " + poc + "\nhigh score: " + maxpoc;
+            document.getElementById("start").style.display = "inline";
+            document.getElementById("start").style.position = "relative";
+            document.getElementById("input_").value = "";
+            document.getElementById("priklad").innerText += vysledek;
+            sc = "";
+            localStorage.setItem("maxpoc", maxpoc)
+            document.getElementById('start').focus();
+        }
+        function input_(){
+            sc = document.getElementById("input_").value;
+        }
+    </script>
+</body>
+</html>

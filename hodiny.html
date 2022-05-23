@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/discord.png">
+    <title>Čas</title>
+    <style>
+        body{
+            background-color: #363940;
+            text-align: center;
+        }
+        img {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body onload="obr()">
+    <img id="img" src="" alt=":)" draggable="false" style="width: 50%;">
+    <script>
+        function obr(){
+            var r = Math.floor(Math.random() * 10 + 1);
+            console.log(r);
+            switch (r){
+                case 1: document.getElementById("img").src = 'images/adamcas.png'; break;
+                case 2: document.getElementById("img").src = 'images/dancas.png'; break;
+                case 3: document.getElementById("img").src = 'images/jenikcas.png'; break;
+                case 4: document.getElementById("img").src = 'images/natkacas.png'; break;
+                case 5: document.getElementById("img").src = 'images/martincas.png'; break;
+                case 6: document.getElementById("img").src = 'images/jonascas.png'; break;
+                case 7: document.getElementById("img").src = 'images/jiricas.png'; break;
+                case 8: document.getElementById("img").src = 'images/sasacas.png'; break;
+                case 9: document.getElementById("img").src = 'images/tonycas.png'; break;
+                case 10: document.getElementById("img").src = 'images/matycas.png'; break;
+            }
+        }
+    </script>
+</body>
+</html>
